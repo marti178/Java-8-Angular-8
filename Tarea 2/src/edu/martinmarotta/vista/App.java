@@ -23,7 +23,7 @@ public class App {
 	Boxeador alumno6 = new Boxeador("Martin", "marotta", 20,80, 74, entrenadores);
 	Boxeador alumno5 = new Boxeador("Martin", "marotta", 20,80, 74, entrenadores);
 
-	
+	h
 	System.out.println("Hola probando programa /n");
 	System.out.println(alumno1.toString()+ "/n");
 	System.out.println(alumno2.toString()+ "/n");
