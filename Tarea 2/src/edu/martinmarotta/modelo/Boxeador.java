@@ -14,13 +14,6 @@ public class Boxeador {
 	private Entrenador profe;
 	private String categoria;
 	
-	
-	
-	
-	
-	
-	
-	
 	public Boxeador(String nombre, String apellido, int edad, int altura, int peso,Entrenador[] profes) {
 		
 		this.nombre = nombre;
@@ -34,7 +27,7 @@ public class Boxeador {
 	
 	
 	
-	
+	// Asignamos profesor si hay cupo, sino mostramos error y devolvemos null
 	public Entrenador asignarprofe(Entrenador[] Entrenador) {
 		
 		if (peso<48 && Entrenador[0].preguntarcupo()) {
@@ -73,16 +66,17 @@ public class Boxeador {
 			Entrenador[3].Reducircupo();
 			this.categoria="Pesado";
 			return Entrenador[3];
-		}else {
+		}else {// casos en los que el cupo esta lleno, muestro que no hay cupo y intento mostrar el profesor que se quedo sin cupo
 			if(peso<52)
-			System.out.println("No hay cupo para el profesor " + Entrenador[0] + "/n");
+			System.out.println("No hay cupo para el profesor " + Entrenador[0].getNombre() + " cupo: " +Entrenador[0].getCupo() );
 			else if(peso<5)
-				System.out.println("No hay cupo para el profesor " + Entrenador[1] + "/n");
+				System.out.println("No hay cupo para el profesor " + Entrenador[1].getNombre() + " cupo: " +Entrenador[0].getCupo()  );
 			else if(peso<52)
-				System.out.println("No hay cupo para el profesor " + Entrenador[2] + "/n");
+				System.out.println("No hay cupo para el profesor " + Entrenador[2].getNombre() +" cupo: " +Entrenador[0].getCupo());
 			else
-				System.out.println("No hay cupo para el profesor " + Entrenador[3] + "/n");
-			return null;
+				System.out.println("No hay cupo para el profesor " + Entrenador[3].getNombre() + " cupo: " +Entrenador[0].getCupo() );
+			
+			return Entrenador[4];
 		}
 	
 	

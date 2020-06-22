@@ -40,7 +40,9 @@ public void setNombre(String nombre) {
 	this.nombre = nombre;
 }
 
-
-
+@Override
+public String toString() {
+	return "Entrenador [cupo=" + cupo + ", nombre=" + nombre + "]";
+}
 
 }
